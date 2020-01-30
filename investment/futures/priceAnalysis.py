@@ -1,7 +1,7 @@
 # priceSequence
 # 导入pmath
 
-import pmath
+import investment.stock.pmath as pmath
 
 def OpenPrice(priceSeq):
     Open=priceSeq[0]
