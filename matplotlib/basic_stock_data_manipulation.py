@@ -8,11 +8,11 @@ import pandas_datareader.data as web
 
 
 style.use('ggplot')
-df = pd.read_csv('uso.csv', parse_dates=True, index_col=0)
+df = pd.read_csv('vxx.csv', parse_dates=True, index_col=0)
 df['200ma'] = df['Adj Close'].rolling(window=200, min_periods=0).mean()
 df['50ma'] = df['Adj Close'].rolling(window=50, min_periods=0).mean()
-df.to_csv('uso_ma.csv')
-df=pd.read_csv('uso_ma.csv', parse_dates=True, index_col=0)
+df.to_csv('vxx_ma.csv')
+df=pd.read_csv('vxx_ma.csv', parse_dates=True, index_col=0)
 ma200=df['200ma']
 ma50=df['50ma']
 close=df['Adj Close']
